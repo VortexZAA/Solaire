@@ -79,9 +79,9 @@ export default function TimelineComponent() {
   ];
 
   return (
-    <Section>
+    <Section> 
       <Container>
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+        <div id={"timeline"} style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
           <Timeline align="left">
             {events.map((event, i) => (
               <TimelineItem key={i}>

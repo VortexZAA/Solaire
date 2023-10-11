@@ -51,7 +51,7 @@ const Container = styled.div`
 
 function App() {
   return (
-    <Container>
+    <Container className="w-screen">
       <Hero>
         <h1>HEADLINES</h1>
       </Hero>

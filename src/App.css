@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* File: font.css */
 @font-face {
   font-family: "Montserrat";
@@ -24,6 +28,10 @@
   src: local("TerminaMedium"), url("./assets/fonts/TerminaMedium.otf") format("opentype");
 }
 
+.navbar a:hover {
+  color:black;
+  @apply transition-all
+}
 
 h1 {
   font-family: "SatoshiBlack", sans-serif;

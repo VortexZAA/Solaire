@@ -16,10 +16,9 @@ const Paper = styled.button`
   top: -10px; /* Butonu 5 piksel yukarı kaldırır */
 
   &:hover {
-    background-color: #00CF77; /* Yeşil renk üzerine gelindiğinde */
+    background-color: #00cf77; /* Yeşil renk üzerine gelindiğinde */
   }
 `;
-
 
 const Container = styled.header`
   position: absolute;
@@ -29,7 +28,6 @@ const Container = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px clamp(24px, 5%, 96px);
   box-sizing: border-box;
   background: linear-gradient(to bottom, #20202090, #20202020);
   backdrop-filter: blur(8px);
@@ -89,7 +87,6 @@ const Button = styled.button`
 `;
 
 const Navbar = () => {
-
   const [account, setAccount] = useState("");
   const [balance, setBalance] = useState("");
 
@@ -112,51 +109,46 @@ const Navbar = () => {
     }
   };
 
-
   return (
-    <div style={{ zIndex: "1000" }}>
-      <Container>
-        <Logo src="./img/logo.svg" />
-        <List>
-        <ListItem>
-            <a href="https://qr.page/g/9kkbyDsTMe" target="_blank" style={{ display: 'flex', alignItems: 'center' }}>
-              <Paper style={{ flex: 0.4, marginRight: '10px' }}>
-                Litepaper
-              </Paper>
-            </a>
-          </ListItem>
-          <a href="https://qr.page/g/1SKuSTAhsDB" target="_blank">
-          <Paper style={{ flex: 0.4, marginRight: '40px' }}>
-                Onepager
-              </Paper>
-    </a>
-          <ListItem>
-            <a href={"#home"}>Home</a>
-          </ListItem>
-          <ListItem>
-            <a href={"#team"}>Team</a>
-          </ListItem>
-          <ListItem>
-            <a href={"#participate"}>Participate</a>
-          </ListItem>
-          <ListItem>
-            <a href={"#works"}>Works</a>
-          </ListItem>
-          <ListItem>
-            <a href={"#timeline"}>Timeline</a>
-          </ListItem>
-          <ListItem>
-            <a href={"#contact"}>Contact</a>
-          </ListItem>
-          
-        </List>
-        <Icons>
-          <Button onClick={connectMetaMask} >Connect Wallet</Button>
-        </Icons>
+    <div className="h-16 " style={{ zIndex: "1000" }}>
+      <Container className="py-2 px-3 md:px6 2xl:px-12 flex items-center gap-6">
+        <img className="h-20" src="./img/logo.svg" />
+        <div className="flex navbar justify-center text-sm md:text-xl font-medium items-center gap-12 w-full">
+          <a
+            href="https://qr.page/g/9kkbyDsTMe"
+            className=" border rounded-full px-5 py-3"
+            target="_blank"
+            style={{ display: "flex", alignItems: "center" }}
+          >
+            Litepaper
+          </a>
+
+          <a
+            href="https://qr.page/g/1SKuSTAhsDB"
+            className=" border rounded-full px-5 py-3"
+            target="_blank"
+          >
+            Onepager
+          </a>
+
+          <a href={"#home"}>Home</a>
+
+          <a href={"#team"}>Team</a>
+
+          <a href={"#participate"}>Participate</a>
+
+          <a href={"#works"}>Works</a>
+
+          <a href={"#timeline"}>Timeline</a>
+
+          <a href={"#contact"}>Contact</a>
+        </div>
+        {/* <Icons>
+          <Button onClick={connectMetaMask}>Connect Wallet</Button>
+        </Icons> */}
       </Container>
     </div>
   );
- 
 };
 
 export default Navbar;
